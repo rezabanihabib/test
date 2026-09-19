@@ -1,0 +1,52 @@
+:root {
+  --bg-light: #f1f1f1;
+  --color-sorati: #e22fbe;
+}
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant theme-red (&:where(.theme-red, .theme-red *));
+
+
+
+@custom-variant themeRed {
+  body {
+    @apply bg-red-950!;
+  }
+}
+
+@theme {
+  --color-asali: #232323;
+  --text-15xl: 80px;
+  --radius-circle-full: 200%;
+}
+
+@theme inline {
+  --color-bg-light: var(--bg-light);
+  --color-sorati: var(--color-sorati);
+}
+
+@layer base {
+  h1 {
+    font-size: var(--text-2xl);
+  }
+}
+
+@layer components {
+  .btn {
+    @apply w-20 h-20 rounded-full bg-amber-400;
+  }
+
+  .lg-btn {
+    @apply rounded-circle-full w-25 h-25 bg-red-500;
+
+    @variant dark {
+      @apply bg-green-500;
+    }
+
+    @variant hover {
+      @apply bg-blue-500!;
+    }
+  }
+}
