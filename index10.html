@@ -14,14 +14,63 @@
     "
     />
   </head>
-  <body>
-    <div class="text-center bg-red-500">test</div>
-    <h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message"></h1>
+  <body class="text-center py-4">
+    <!-- <h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message"></h1>
+    <p x-data="{alert : 'سلام'}" x-text="alert"></p>
+    <p x-data="{}" x-text="'test'"></p> -->
 
-    <!-- <div x-data="{ count: 0 }">
-      <button x-on:click="count++">Increment</button>
-
-      <span x-text="count"></span>
+    <!-- <div class="bg-rose-500" x-data="{ status: false }">
+      <button @click="status = ! status">دکمه</button>
+      <div x-show="status">Content...</div>
     </div> -->
+    <!-- 
+    <div
+      x-data="{ status: false, toggle(name) {
+        console.log(name);
+        this.status = ! this.status } 
+        }"
+    >
+      <button @click="toggle('reza')">Toggle Content</button> -->
+    <!-- <button @click="toggle">Toggle Content</button> -->
+    <!-- <div x-show="status">Content...</div>
+      <p x-show="status">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam
+        voluptate necessitatibus quibusdam vero dolores a! Atque, veritatis
+        saepe, ducimus eius laboriosam ipsa, vitae expedita facilis fuga illo
+        nulla quas ut.
+      </p>
+    </div> -->
+
+    <!-- 
+    <div x-data="{ test: 0 }">
+      <button x-on:click="test++">Increment</button>
+      <span x-text="test" class="bg-pink-400"></span>
+    </div> -->
+
+    <!-- <div x-data="{ name: 'reza' }"> -->
+    <!-- <span x-text="name">Will output: "reza"</span> -->
+
+    <!-- <div x-data="{ lastname: 'bhb' }"> -->
+    <!-- <span x-text="name">Will output: "reza"</span> -->
+
+    <!-- <div x-data="{ name: 'sajjad' }"> -->
+    <!-- <span x-text="name">Will output: "sajjad"</span> -->
+    <!-- </div> -->
+    <!-- </div> -->
+    <!-- </div> -->
+
+    <!-- <div
+      x-data="{open : false, get isOpen() { return this.open }, toggle() { this.open = ! this.open }}"
+    >
+      <button @click="toggle()">Toggle Content</button>
+
+      <div x-show="isOpen">Content...</div>
+    </div> -->
+
+    <div x-data>
+        <p x-text="'test'"></p>
+    </div>
+
+    <p x-data="{name : 'reza'}" x-text="name"></p>
   </body>
 </html>
