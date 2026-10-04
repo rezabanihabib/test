@@ -67,10 +67,23 @@
       <div x-show="isOpen">Content...</div>
     </div> -->
 
-    <div x-data>
+    <!-- <div x-data>
         <p x-text="'test'"></p>
     </div>
 
-    <p x-data="{name : 'reza'}" x-text="name"></p>
+    <p x-data="{name : 'reza'}" x-text="name"></p> -->
+    <div
+      x-data="{ status: true }"
+    >
+      <div>
+        <button
+          class="bg-blue-500"
+          @click="status = !status"
+        >
+          open
+        </button>
+        <div x-show="status">09903525760</div>
+      </div>
+    </div>
   </body>
 </html>
